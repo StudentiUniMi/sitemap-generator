@@ -35,7 +35,7 @@ def generate_groups():
 def write_to(fd, links):
     for link in links:
         fd.write("<url>\n")
-        fd.write(f"<loc>{escape(link)}</loc>\n")
+        fd.write(f"<loc>{escape(link).strip()}</loc>\n")
         fd.write(f"<lastmod>{dt.now().strftime('%Y-%m-%d')}</lastmod>\n")
         fd.write("</url>\n")
 
